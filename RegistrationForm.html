@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #2d3a4b;
+            text-align: center;
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            text-align: center;
+            color: #3b82f6;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        form {
+            max-width: 400px;
+            margin: 40px auto;
+            background: #ffffffcc;
+            padding: 32px 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(60, 72, 88, 0.12);
+        }
+        label {
+            display: block;
+            margin-top: 18px;
+            font-weight: 500;
+            color: #374151;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border-radius: 6px;
+            border: 1px solid #b6c2d1;
+            background: #f7fafc;
+            font-size: 15px;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+            border: 1.5px solid #3b82f6;
+            outline: none;
+            background: #fff;
+        }
+        button {
+            margin-top: 28px;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+            border: none;
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+        }
+        @media (max-width: 500px) {
+            form {
+                padding: 18px 8px;
+            }
+            h1 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        ACE ENGINEERING COLLEGE<br>
+        <span style="font-size: 20px; color: #64748b;">An Autonomous Institution</span>
+    </h1>
+
+    <form id="registrationForm">
+        <h2>Event-Registration Form</h2>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+            <option value="" disabled selected>Select your department</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="electronics">Electronics</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="civil">Civil</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <button type="submit">Register</button>
+    </form>
